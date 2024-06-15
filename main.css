@@ -1,0 +1,134 @@
+html,
+body {
+  font-family: "Source Serif 4", serif;
+  background-color: #f4ece1;
+  color: #412c04;
+  height: 100%;
+  margin: 0;
+  font-size: 19px;
+  line-height: 26px;
+}
+
+.layout {
+  margin: 88px auto 40px;
+  padding: 0 24px 48px;
+  max-width: 800px;
+}
+
+.header-section {
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 44px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  line-height: 120%;
+}
+
+.logo-title {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.logo-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  max-width: 150px;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #412c04;
+}
+
+.iframe-container {
+  margin: 40px 0 56px;
+}
+
+.title {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+ul li {
+  padding-bottom: 8px;
+}
+
+.content-section {
+  margin-top: 96px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  gap: 20px;
+}
+
+.image-grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.quote-container {
+  display: flex;
+  gap: 20px;
+}
+
+.quote-image {
+  width: 144px;
+  height: 144px;
+  border-radius: 4px;
+}
+
+.quote {
+  margin-bottom: 4px;
+}
+
+.quote-author {
+  color: #6c6555;
+  margin: 8px 0 28px;
+}
+
+.button {
+  display: inline-flex !important;
+  gap: 12px;
+  align-items: center;
+  background-color: #412c04;
+  border: none;
+  color: #f4ece1;
+  padding: 12px 20px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 600px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
