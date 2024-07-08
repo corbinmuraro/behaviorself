@@ -33,6 +33,10 @@ a {
   color: var(--black);
 }
 
+p {
+  max-width: 75ch;
+}
+
 a:hover {
   color: var(--blue)
 }
