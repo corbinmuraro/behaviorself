@@ -1,12 +1,13 @@
 @font-face {
-  font-family: 'Family';
-  src: url('fonts/Family-Regular.ttf') format('truetype'),
+  font-family: "Family";
+  src: url("fonts/Family-Regular.ttf") format("truetype");
 }
 
 :root {
-  --bg: #FBF9F5;
-  --black: rgba(0, 0, 0, 0.9);;
-  --blue: #0064E6;
+  --bg: #fbf9f5;
+  --black: rgba(0, 0, 0, 0.85);
+  --blue: #0064e6;
+  --blue-hover: #0046a1;
 
   --max-width: 980px;
 }
@@ -25,7 +26,7 @@ body {
 img {
   user-select: none;
   -webkit-user-drag: none;
-  user-drag: none; 
+  user-drag: none;
 }
 
 a {
@@ -33,16 +34,25 @@ a {
   color: var(--black);
 }
 
+a.blue-link {
+  color: var(--blue);
+}
+
+a.blue-link:hover {
+  color: var(--blue-hover);
+}
+
 p {
   max-width: 75ch;
 }
 
 a:hover {
-  color: var(--blue)
+  color: var(--blue);
 }
 
 .toolbar-container {
   margin: 32px auto;
+  padding: 0 24px;
   max-width: var(--max-width);
 }
 
@@ -58,7 +68,7 @@ a:hover {
 }
 
 .toolbar-action {
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .layout {
@@ -73,7 +83,8 @@ a:hover {
   margin: 72px auto 56px;
 }
 
-.left-col, .right-col {
+.left-col,
+.right-col {
   display: flex;
   flex: 1;
 }
@@ -86,6 +97,12 @@ a:hover {
   max-width: 20ch;
 }
 
+.other-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .right-col {
   flex: 0.8;
 }
@@ -93,8 +110,8 @@ a:hover {
 .right-col img {
   width: 100%;
   border-radius: 15px;
+  object-fit: cover;
 }
-
 
 h1 {
   font-size: 44px;
@@ -126,6 +143,28 @@ h1 {
   height: auto;
 }
 
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 32px 0;
+  opacity: 0.5;
+  font-size: 18px;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid var(--black);
+  opacity: 0.5;
+}
+.divider::before {
+  margin-right: 10px;
+}
+.divider::after {
+  margin-left: 10px;
+}
+
 .button {
   display: inline-flex !important;
   gap: 12px;
@@ -143,12 +182,40 @@ h1 {
   border-radius: 6px;
 }
 
-.content-section-title {
-  font-size: 28px;
+.button:hover {
+  border: 2px solid var(--blue);
+  color: var(--bg);
+  background: var(--blue);
 }
 
+.testimonial-quote {
+  margin-bottom: 40px;
+}
 
+.testimonial-author {
+  display: block;
+  margin-top: 4px;
+}
 
+.testimonial-author:before {
+  content: "– ";
+}
+
+.content-section-title {
+  font-size: 28px;
+  padding-top: 24px;
+}
+
+@media screen and (max-width: 700px) {
+  .header-layout {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+  .right-col img {
+    max-height: 600px;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .image-grid {
