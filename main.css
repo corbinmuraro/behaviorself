@@ -188,6 +188,16 @@ h1 {
   background: var(--blue);
 }
 
+.button.button-filled {
+  background-color: var(--blue);
+  color: var(--bg);
+}
+
+.button.button-filled:hover {
+  background-color: var(--blue-hover);
+  border: 2px solid var(--blue-hover);
+}
+
 .testimonial-quote {
   margin-bottom: 40px;
 }
