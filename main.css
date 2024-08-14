@@ -1,6 +1,13 @@
 @font-face {
   font-family: "Family";
   src: url("fonts/Family-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Family";
+  src: url("fonts/Family-Bold.ttf") format("truetype");
+  font-weight: 600;
 }
 
 :root {
@@ -44,6 +51,11 @@ a.blue-link:hover {
 
 p {
   max-width: 75ch;
+}
+
+.bold-blue {
+  font-weight: 600;
+  color: var(--blue);
 }
 
 a:hover {
